@@ -1,8 +1,8 @@
 // Copyright 2021 Evgenzayts evgenzaytsev2002@yandex.ru
 
-#ifndef TEMPLATE_EXAMPLE_HPP
-#define TEMPLATE_EXAMPLE_HPP
+#ifndef INCLUDE_EXAMPLE_HPP
+#define INCLUDE_EXAMPLE_HPP
 
 auto example() -> void;
 
-#endif  // TEMPLATE_EXAMPLE_HPP
+#endif  // INCLUDE_EXAMPLE_HPP

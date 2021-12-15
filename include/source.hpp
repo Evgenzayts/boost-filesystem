@@ -1,10 +1,11 @@
 // Copyright 2021 Evgenzayts evgenzaytsev2002@yandex.ru
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+#ifndef INCLUDE_SOURCE_HPP_
+#define INCLUDE_SOURCE_HPP_
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 struct Information {
   std::vector<std::string> id;
@@ -16,4 +17,4 @@ struct Information {
 
 void my_func(char* path_to_ftp);
 
-#endif // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_SOURCE_HPP_
