@@ -1,23 +1,25 @@
 // Copyright 2021 Evgenzayts evgenzaytsev2002@yandex.ru
 
 #include <boost/regex.hpp>
-#include <boost/filesystem.hpp>
 #include <list>
 #include <string>
 #include <source.hpp>
 
 void my_func(char* path_to_ftp){
   auto *my_info = new Information;
-  my_info->path = path_to_ftp;
-  if (my_info->path.empty()) {
-    my_info->path = "home/ubuntu/CLionProjects/LABA4/demo";
+
+  if (path_to_ftp) {
+    if (boost::filesystem::exists(path_to_ftp)) {
+      my_info->path = path_to_ftp;
+    }
+  } else {
+    my_info->path = boost::filesystem::current_path();
   }
 
-  const boost::filesystem::path this_path(my_info->path);
   const boost::regex check("balance_(\\d{8})_(\\d{8}).txt");
 
   boost::filesystem::directory_iterator iter_dir;
-  for (boost::filesystem::directory_iterator j( my_info->path);
+  for (boost::filesystem::directory_iterator j(my_info->path);
        j != iter_dir;
        ++j)
   {
